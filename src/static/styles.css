@@ -90,15 +90,19 @@ section h3 {
 
 .participants-list {
   margin-top: 10px;
-  padding-left: 18px; /* show bullets */
+  padding-left: 0;
+  list-style: none; /* hide bullets */
 }
 
 .participants-list li {
   margin-bottom: 8px;
-  list-style-type: disc;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Make each participant look like a pill/badge while preserving the bullet */
+/* Make each participant look like a pill/badge */
 .participant-item {
   display: inline-block;
   padding: 6px 10px;
@@ -107,7 +111,22 @@ section h3 {
   border-radius: 999px;
   color: #1a237e;
   font-size: 0.9rem;
-  margin-left: 6px; /* space from bullet */
+  /* removed margin-left so it sits flush */
+}
+
+/* Delete icon/button next to participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* Empty-state */
